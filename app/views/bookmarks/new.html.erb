@@ -1,0 +1,15 @@
+<h1>Add a Bookmark to <%= @list.name.capitalize %> List</h1>
+
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.association :movie, label: "Select Movie" %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>
+
+<p>
+  <%= link_to "Back to #{@list.name.capitalize} List", list_path(@list) %>
+</p>
+
+<p>
+  <%= link_to 'Back to All Lists', lists_path %>
+</p>
