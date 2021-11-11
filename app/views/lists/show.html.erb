@@ -1,0 +1,9 @@
+<h1><%= @list.name.capitalize %> List</h1>
+
+<% @list.bookmarks.each do |bookmark| %>
+
+  <%= image_tag bookmark.movie.poster_url, alt: "movie poster", width: 200 %>
+  <h2><%= bookmark.movie.title %></h2>
+  <p><%= bookmark.movie.overview %></p>
+
+<% end %>
