@@ -1,14 +1,14 @@
-<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80')">
-  <h1>Movies Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80);">
+  <div class="container">
+    <h1>All Movies Lists</h1>
+  </div>
 </div>
 
-
-<div>
   <% @lists.each do |list| %>
-    <h2>
-      <%= link_to list.name.capitalize, list_path(list) %>
-    </h2>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <h2><%= link_to list.name.capitalize, list_path(list) %></h2>
+    </div>
   <% end %>
-</div>
+
 
 <%= link_to 'Create a New List', new_list_path, class: "btn btn-primary" %>
