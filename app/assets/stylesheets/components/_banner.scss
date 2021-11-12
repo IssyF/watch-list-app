@@ -1,7 +1,11 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  // padding: 150px 0;
+  margin-bottom: 20px;
+  height: 300px;
+  display: flex;
+  align-items: center;
 }
 
 .banner h1 {
@@ -12,9 +16,15 @@
   font-weight: bold;
 }
 
-// .banner p {
-//   font-size: 20px;
-//   color: white;
-//   opacity: .7;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-// }
+.banner a {
+  font-size: 20px;
+  color: white;
+  opacity: .8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: relative;
+  top: -100px;
+}
+
+.banner a:hover {
+  opacity: .6;
+}
