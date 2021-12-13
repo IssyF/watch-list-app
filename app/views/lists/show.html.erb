@@ -14,7 +14,7 @@
 <div class="container">
 
   <div>
-    <%= link_to 'Create a Bookmark', new_list_bookmark_path(@list), class: "btn btn-dark" %>
+    <%= link_to 'Create a Bookmark', new_list_bookmark_path(@list), class: "btn btn-dark new-bookmark" %>
   </div>
 
   <div class="card-bookmark">
@@ -22,12 +22,15 @@
       <%= image_tag bookmark.movie.poster_url, alt: "movie poster", width: 200 %>
 
       <div class="card-bookmark-info">
-        <h2><%= bookmark.movie.title %></h2>
-        <p><%= bookmark.movie.rating %></p>
+        <h2>
+          <%= bookmark.movie.title %>
+          <%= link_to bookmark_path(bookmark), method: :delete, class:"delete-bookmark", data: { confirm: "Are you sure you want to delete this bookmark?"} do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </h2>
+        <p>Rating <%= bookmark.movie.rating %></p>
         <p><%= bookmark.movie.overview %></p>
-        <p><%= bookmark.comment.capitalize %></p>
-        <p>
-          <%= link_to 'Delete Bookmark', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to delete this bookmark?"} %>
+        <p class="bookmark-comment">"<%= bookmark.comment.capitalize %>"</p>
         </p>
       </div>
 

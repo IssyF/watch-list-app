@@ -5,7 +5,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .card-bookmark img {
@@ -28,7 +28,21 @@
   margin-top: 8px;
 }
 
-// why is this not working??
-.card-product .card-product-infos {
+.card-bookmark-info {
   padding: 16px;
+}
+
+.delete-bookmark {
+  color: gray;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.delete-bookmark:hover {
+  color: gray;
+  opacity: 80%;
+}
+
+.bookmark-comment {
+  font-style: italic;
 }
