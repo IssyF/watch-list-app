@@ -5,7 +5,13 @@
   margin-bottom: 20px;
   height: 300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.banner-header {
+  width: 100%;
 }
 
 .banner h1 {
@@ -14,19 +20,36 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
-  display: inline-block;
   text-align: center;
 }
 
-.banner a {
-  font-size: 20px;
+.banner p {
+  margin: 0;
   color: white;
-  opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  position: relative;
-  top: -100px;
+  opacity: 0.8;
+  text-align: center;
 }
 
-.banner a:hover {
+.banner i {
+  font-size: 20px;
+  color: white;
+  opacity: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.banner i:hover {
   opacity: .6;
+}
+
+.banner-button {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.banner-button:hover {
+  opacity: 0.9;
 }
