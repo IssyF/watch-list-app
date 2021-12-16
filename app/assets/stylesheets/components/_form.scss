@@ -3,26 +3,24 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 4px;
   width: 70%;
-  margin: 16px;
-  margin-bottom: 8px;
   padding: 16px;
-  align-items: center;
+  margin-bottom: 8px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .new-form input {
-  width: 95%;
-  font-size: 16px;
+  width: 100%;
+  font-size: 13px;
 }
 
 .new-form label {
   font-size: 14px;
 }
 
-#list_photo {
-  font-size: 12px;
-}
-
-// not working below - target differently
-.submit-button {
-  font-size: 8px;
+.new-list {
+  margin: 0;
 }

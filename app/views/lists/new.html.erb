@@ -8,11 +8,12 @@
   <% end %>
 </div>
 
-<div class="container new-form">
-  <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file, label: "Upload an image for the list (optional)" %>
-    <%= f.submit class:"btn btn-dark submit-button"%>
-  <% end %>
-
+<div class="container">
+  <div class="new-form">
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name, label:"List name" %>
+      <%= f.input :photo, as: :file, label: "Upload an image for the list (optional)" %>
+      <%= f.submit class:"btn btn-dark", id:"submit-button" %>
+    <% end %>
+  </div>
 </div>

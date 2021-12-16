@@ -1,15 +1,19 @@
-<h1>Add a Bookmark to <%= @list.name.capitalize %> List</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
+  <div class="banner-header">
+    <h1>Add a Movie Bookmark to <%= @list.name.capitalize %> List</h1>
+    <%# <p>Create a new list to add movie bookmarks to</p> %>
+  </div>
+  <%= link_to list_path(@list), class:"back-button" do %>
+    <i class="fas fa-arrow-circle-left"></i>
+  <% end %>
+</div>
 
-<%= simple_form_for([@list, @bookmark]) do |f| %>
-  <%= f.association :movie, label: "Select Movie" %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
-
-<p>
-  <%= link_to "Back to #{@list.name.capitalize} List", list_path(@list) %>
-</p>
-
-<p>
-  <%= link_to 'Back to All Lists', lists_path %>
-</p>
+<div class="container">
+  <div class="new-form">
+    <%= simple_form_for([@list, @bookmark]) do |f| %>
+      <%= f.association :movie, label: "Select Movie" %>
+      <%= f.input :comment, label:"Comment (min. 6 chars)"%>
+      <%= f.button :submit, "Add", class:"btn btn-dark", id:"submit-button" %>
+    <% end %>
+  </div>
+</div>
